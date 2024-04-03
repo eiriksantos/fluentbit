@@ -1,0 +1,6 @@
+export AWS_ACCOUNT_ID="your_aws_account_id"
+export CLUSTER_ID="your_cluster_id"
+export BUCKET_NAME="your_bucket_name"
+
+aws eks describe-cluster --name esantos-eks --query cluster.identity.oidc.issuer --output text
+aws sts get-caller-identity --query Account --output text

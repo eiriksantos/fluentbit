@@ -1,0 +1,19 @@
+# Creation of configmap 1
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fluent-bit-cluster-info
+  namespace: logging
+  labels:
+    app: fluent-bit
+data:
+  ClusterName: esantos-eks
+  RegionName: us-east-1
+  FluentBitHttpPort: "2020"
+  FluentBitReadFromHead: "OFF"
+  logs.region: us-east-1
+  cluster.name: esantos-eks
+  http.server: "ON"
+  http.port: "2020"
+  read.head: "OFF"
+  read.tail: "ON"
