@@ -55,4 +55,5 @@ resource "aws_iam_policy_attachment" "s3_full_access_attachment" {
 
 resource "aws_s3_bucket" "esantos_s3_bucket" {
   bucket = var.bucket_name
+  force_destroy = true
 }
